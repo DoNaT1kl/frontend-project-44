@@ -11,7 +11,7 @@ const isEvenNum = () => {
     for (let i = 0; i < 3; i += 1) {
 
         const randomInt = getRandomNum(1, 100);
-        console.log(`Question: ${randomInt}`)
+        console.log(`Question: ${randomInt}`);
         const answer = readlineSync.question('Your answer: ');
         const evenNum = isEven(randomInt);
 
