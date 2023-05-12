@@ -13,17 +13,14 @@ const isEvenNum = () => {
         const randomInt = getRandomNum(1, 100);
         console.log(`Question: ${randomInt}`);
         const answer = readlineSync.question('Your answer: ');
-        const evenNum = isEven(randomInt);
+        const evenNum = isEven(randomInt) ? 'yes' : 'no';
 
-        if (answer === 'yes' && evenNum === false) {
-            console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${Username}!`);
-            return;
-        } else if (answer === 'no' && evenNum === true) {
-            console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${Username}!`);
+        if (answer !== evenNum) {
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${evenNum}'.\nLet's try again, ${Username}!`);
             return;
         }
 
-         console.log('Correct!');
+        console.log('Correct!')
 
         if ((i + 1) % 3 === 0) {
             console.log(`Congratulations, ${Username}!`);
