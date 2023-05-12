@@ -9,17 +9,16 @@ const gameGcd = () => {
     for (let i = 0; i < 3; i += 1) {
         const firstNum = getRandomNum(1, 20);
         const secondNum = getRandomNum(1, 20);
-        const question = (`Question: ${firstNum} ${secondNum}`);
-        console.log(question);
+        console.log(`Question: ${firstNum} ${secondNum}`);
         const answer = readlineSync.question('Your answer: ')
         const correctAnswer = getGcd(firstNum, secondNum);
 
-        if (answer != correctAnswer) {
+        if (answer !== String(correctAnswer)) {
             console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${Username}!`);
-            break;
-        } else {
-            console.log('Correct!');
+            return;
         }
+
+        console.log('Correct!');
 
         if ((i + 1) % 3 === 0) {
             console.log(`Congratulations, ${Username}!`);
