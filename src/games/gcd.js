@@ -1,8 +1,9 @@
 import { greeting, getRandomNum } from '../index.js';
 import readlineSync from "readline-sync";
 
+const getGcd = (num1, num2) => (num2 === 0 ? num1 : getGcd(num2, num1 % num2));
+
 const gameGcd = () => {
-    const getGcd = (num1, num2) => (num2 === 0 ? num1 : getGcd(num2, num1 % num2));
     const Username = greeting();
     console.log('Find the greatest common divisor of given numbers.');
 
