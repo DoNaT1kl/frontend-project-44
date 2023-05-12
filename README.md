@@ -27,18 +27,19 @@ There will be small games that develop thinking. They will have 3 questions. If 
 #### Starting game
     brain-even
 #### Preview
-
+<a href="https://asciinema.org/a/3hPGC6WWMqWnJIl3BjLD12dDO" target="_blank"><img src="https://asciinema.org/a/3hPGC6WWMqWnJIl3BjLD12dDO.svg" /></a>
 ## Progression
 #### Starting game
     brain-progression
 #### Preview
-
+<a href="https://asciinema.org/a/vAQbbVnnyGzfaG3F4PPzk5HIW" target="_blank"><img src="https://asciinema.org/a/vAQbbVnnyGzfaG3F4PPzk5HIW.svg" /></a>
 ## Prime number
 #### Starting game
     brain-prime
 #### Preview
-
+<a href="https://asciinema.org/a/JA4bqS3aArEC3Ld0DRJtI0eTi" target="_blank"><img src="https://asciinema.org/a/JA4bqS3aArEC3Ld0DRJtI0eTi.svg" /></a>
 ## Common divisor
 #### Starting game
     brain-gcd
 #### Preview
+<a href="https://asciinema.org/a/7cmTAnVEHVIXABf1WCuiRAOSi" target="_blank"><img src="https://asciinema.org/a/7cmTAnVEHVIXABf1WCuiRAOSi.svg" /></a>
