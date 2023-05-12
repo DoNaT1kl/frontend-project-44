@@ -20,11 +20,11 @@ const primeGame = () => {
         const randomNum = getRandomNum(1, 50);
         const primeNum = isPrime(randomNum);
 
-        if (answer === 'yes' && primeNum === false) {
-            console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${Username}!`);
-            return;
-        } else if (answer === 'no' && primeNum === true) {
+        if (answer === 'no' && primeNum === true) {
             console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${Username}!`);
+            return;
+        } else if (answer === 'yes' && primeNum === false) {
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${Username}!`);
             return;
         }
 
