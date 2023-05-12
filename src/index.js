@@ -9,6 +9,8 @@ const greeting = () => {
 };
 
 //Генерация случайного целого числа
-const getRandomNum = (min, max) => Math.floor(Math.random() * max) + min;
+const getRandomNum = (min, max) => {
+    return Math.floor(Math.random() * max) + min;
+};
 
 export { greeting, getRandomNum };
