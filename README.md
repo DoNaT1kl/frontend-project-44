@@ -22,7 +22,7 @@ There will be small games that develop thinking. They will have 3 questions. If 
 #### Starting game
     brain-calc
 #### Preview
-
+<a href="https://asciinema.org/a/NI91ImBRxqxjLYjxiiM7jE1O2" target="_blank"><img src="https://asciinema.org/a/NI91ImBRxqxjLYjxiiM7jE1O2.svg" /></a>
 ## Even number
 #### Starting game
     brain-even
