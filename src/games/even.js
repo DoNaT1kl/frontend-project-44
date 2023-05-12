@@ -11,21 +11,19 @@ const isEvenNum = () => {
     for (let i = 0; i < 3; i += 1) {
 
         const randomInt = getRandomNum(1, 100);
-        console.log(`Question: ${randomInt} `)
+        console.log(`Question: ${randomInt}`)
         const answer = readlineSync.question('Your answer: ');
         const evenNum = isEven(randomInt);
-    
-        if (answer === 'yes' && evenNum === true) {
-            console.log('Correct!');
-        } else if (answer === 'no' && evenNum === false) {
-            console.log('Correct!');
-        } else if (answer === 'yes' && evenNum === false) {
+        // (answer === 'yes' && evenNum === true)
+        if (answer === 'yes' && evenNum === false) {
             console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${Username}!`);
             return;
-        } else {
+        } else if (answer === 'no' && evenNum === true) {
             console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${Username}!`);
             return;
         }
+
+         console.log('Correct!');
 
         if ((i + 1) % 3 === 0) {
             console.log(`Congratulations, ${Username}!`);
