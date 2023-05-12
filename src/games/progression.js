@@ -9,9 +9,10 @@ const makeProgression = (startNumber, step, maxLength) => {
     return progression;
 };
 
+const Username = greeting();
+console.log('What number is missing in the progression?');
+
 const gameProgression = () => {
-    const Username = greeting();
-    console.log('What number is missing in the progression?');
 
     for (let i = 0; i < 3; i += 1) {
         const startNum = getRandomNum(1, 30);

@@ -3,9 +3,10 @@ import readlineSync from "readline-sync";
 
 const getGcd = (num1, num2) => (num2 === 0 ? num1 : getGcd(num2, num1 % num2));
 
+const Username = greeting();
+console.log('Find the greatest common divisor of given numbers.');
+
 const gameGcd = () => {
-    const Username = greeting();
-    console.log('Find the greatest common divisor of given numbers.');
 
     for (let i = 0; i < 3; i += 1) {
         const firstNum = getRandomNum(1, 20);

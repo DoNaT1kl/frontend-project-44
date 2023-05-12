@@ -3,10 +3,10 @@ import readlineSync from "readline-sync";
 
 const isEven = (num) => num % 2 === 0;
 
-const isEvenNum = () => {
+const Username = greeting();
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-    const Username = greeting();
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const isEvenNum = () => {
 
     for (let i = 0; i < 3; i += 1) {
 
@@ -14,7 +14,7 @@ const isEvenNum = () => {
         console.log(`Question: ${randomInt}`)
         const answer = readlineSync.question('Your answer: ');
         const evenNum = isEven(randomInt);
-        // (answer === 'yes' && evenNum === true)
+
         if (answer === 'yes' && evenNum === false) {
             console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${Username}!`);
             return;
