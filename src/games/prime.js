@@ -1,4 +1,4 @@
-import { greeting, getRandomNum, is } from '../index.js';
+import { greeting, getRandomNum } from '../index.js';
 import readlineSync from "readline-sync";
 
 const Username = greeting();
@@ -15,10 +15,10 @@ const primeGame = () => {
 
     for (let i = 0; i < 3; i += 1) {
 
-        const answer = readlineSync.question('Your answer: ');
         const randomNum = getRandomNum(1, 50);
         console.log(`Question: ${randomNum}`);
         const primeNum = isPrime(randomNum) ? 'yes' : 'no';
+        const answer = readlineSync.question('Your answer: ');
 
         if (answer !== primeNum) {
             console.log(`'${answer}' is wrong answer ;(. Correct answer was '${primeNum}'.\nLet's try again, ${Username}!`);
