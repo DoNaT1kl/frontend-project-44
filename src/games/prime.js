@@ -15,9 +15,9 @@ const primeGame = () => {
 
     for (let i = 0; i < 3; i += 1) {
 
-        const randomNum = getRandomNum(1, 100);
         console.log(`Question: ${randomInt}`);
         const answer = readlineSync.question('Your answer: ');
+        const randomNum = getRandomNum(1, 50);
         const primeNum = isPrime(randomNum);
 
         if (answer === 'yes' && primeNum === false) {
