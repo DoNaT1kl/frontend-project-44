@@ -1,8 +1,9 @@
-import readlineSync from 'readline-sync';
+import runEngine from '../index.js';
 import getRandomNum from '../utils.js';
-import greeting from '../index.js';
 
-const getOperstor = () => {
+const rules = 'What is the result of the expression?';
+
+const getOperator = () => {
   const operators = ['+', '-', '*'];
   const randomIndex = Math.floor(Math.random() * (operators.length));
   const operator = operators[randomIndex];
@@ -12,10 +13,9 @@ const getOperstor = () => {
 const calc = () => {
   const firstNum = getRandomNum(1, 20);
   const secondNum = getRandomNum(1, 20);
-  const operator = getOperstor();
-  console.log(`Question: ${firstNum} ${operator} ${secondNum}`);
-  let correctAnswer = '';
-
+  const operator = getOperator();
+  const question = `${firstNum} ${operator} ${secondNum}`;
+  let correctAnswer = [];
   if (operator === '+') {
     correctAnswer = firstNum + secondNum;
   } else if (operator === '-') {
@@ -23,28 +23,8 @@ const calc = () => {
   } else {
     correctAnswer = firstNum * secondNum;
   }
-  return correctAnswer;
+  correctAnswer = String(correctAnswer);
+  return [question, correctAnswer];
 };
 
-const Username = greeting();
-console.log('What is the result of the expression?');
-
-const calcGame = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const correctAnswer = calc();
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer === String(correctAnswer)) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${Username}!`);
-      return;
-    }
-
-    if ((i + 1) % 3 === 0) {
-      console.log(`Congratulations, ${Username}!`);
-    }
-  }
-};
-
-export default calcGame;
+export default () => runEngine(rules, calc);

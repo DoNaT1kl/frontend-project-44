@@ -1,6 +1,7 @@
-import readlineSync from 'readline-sync';
+import runEngine from '../index.js';
 import getRandomNum from '../utils.js';
-import greeting from '../index.js';
+
+const rules = ('What number is missing in the progression?');
 
 const makeProgression = (startNumber, step, maxLength) => {
   const progression = [];
@@ -10,34 +11,16 @@ const makeProgression = (startNumber, step, maxLength) => {
   return progression;
 };
 
-const Username = greeting();
-console.log('What number is missing in the progression?');
-
 const gameProgression = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const startNum = getRandomNum(1, 30);
-    const stepNum = getRandomNum(1, 5);
-    const lengthNum = getRandomNum(5, 10);
-    const progression = makeProgression(startNum, stepNum, lengthNum);
-    const popRandomIndex = getRandomNum(0, progression.length);
-    const correctAnswer = progression[popRandomIndex];
-    progression[popRandomIndex] = '..';
-    const question = progression.join(' ');
-
-    console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer !== String(correctAnswer)) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${Username}!`);
-      return;
-    }
-
-    console.log('Correct!');
-
-    if ((i + 1) % 3 === 0) {
-      console.log(`Congratulations, ${Username}!`);
-    }
-  }
+  const startNum = getRandomNum(1, 30);
+  const stepNum = getRandomNum(1, 5);
+  const lengthNum = getRandomNum(5, 10);
+  const progression = makeProgression(startNum, stepNum, lengthNum);
+  const popRandomIndex = getRandomNum(0, progression.length);
+  const correctAnswer = String(progression[popRandomIndex]);
+  progression[popRandomIndex] = '..';
+  const question = progression.join(' ');
+  return [question, correctAnswer];
 };
 
-export default gameProgression;
+export default () => runEngine(rules, gameProgression);
