@@ -6,7 +6,7 @@ const runEngine = (rules, generateRound) => {
   console.log(`Hello, ${userName}!`);
   console.log(rules);
 
-  const roundsCount = 3
+  const roundsCount = 3;
 
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = generateRound();

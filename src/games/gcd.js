@@ -12,4 +12,4 @@ const gameGcd = () => {
   return [question, correctAnswer];
 };
 
-export default () => runEngine (rules, gameGcd);
+export default () => runEngine(rules, gameGcd);

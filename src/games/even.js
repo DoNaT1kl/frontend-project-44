@@ -6,8 +6,8 @@ const isEven = (num) => num % 2 === 0;
 
 const isEvenNum = () => {
   const randomInt = getRandomNum(1, 100);
-  const question = (`Question: ${randomInt}`);
   const correctAnswer = isEven(randomInt) ? 'yes' : 'no';
+  const question = (`Question: ${randomInt}`);
   return [question, correctAnswer];
 };
 
