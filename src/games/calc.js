@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
-import { greeting, getRandomNum } from '../index.js';
+import getRandomNum from '../utils.js';
+import greeting from '../index.js';
 
 const getOperstor = () => {
   const operators = ['+', '-', '*'];

@@ -7,6 +7,4 @@ const greeting = () => {
   return name;
 };
 
-const getRandomNum = (min, max) => Math.floor(Math.random() * max) + min;
-
-export { greeting, getRandomNum };
+export default greeting;
