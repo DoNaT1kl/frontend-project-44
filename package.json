@@ -1,8 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/DoNaT1kl/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/DoNaT1kl/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "5 mini games that develop thinking",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +20,6 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "eslint": "^8.39.0",
-    "eslint-plugin-react": "^7.32.2"
+    "eslint": "^8.39.0"
   }
 }
